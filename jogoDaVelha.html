@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jogo da velha</title>
+    <style>
+        body{
+            
+            background-image: linear-gradient(45deg, #331BFA, #5817E6, #B31CE6);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            color: black;
+        }
+
+        .regras{
+            color: white;
+            text-shadow: 2px 2px 1px black
+        }
+
+        div{
+            text-align: center;
+        }
+
+        h1{
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.186);
+            width: 290px;
+            margin: 10px auto;
+            text-shadow: 2px 2px 2px white;
+        }
+
+        header{
+
+            text-align: center;
+            font-weight: bold;
+           
+
+        }
+        p{
+            margin: auto;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+        span{
+            font-size: 30px;
+            text-shadow: 2px 2px 2px red;
+        }
+
+        section{
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 330px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.638);
+        }
+
+        footer{
+            color: white;
+            text-align: center;
+            margin: auto;
+            text-shadow: 1px 1px 1px black;
+            
+        }
+        footer p{
+            width: 200px;
+            margin:15px auto;
+            background: rgba(0, 0, 0, 0.207);
+            border-radius: 8px;
+        }
+        .recomecar{
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-size: 15px;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .caixa{
+            width: 50px;
+            height: 50px;
+            font-size: 50px;
+            padding-left: 25px;
+            margin-top: 4px;
+        
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<!-- vai chamar a função assim que o HTML for carregado -->
+<body>
+    <header>
+        <h1>Jogo da Velha</h1>
+        <p class="regras">Para jogar utilize letra X e letra O</p>
+        <p data-troca="">Vez do jogador <span>X</span></p>
+    </header>
+        
+    <section>
+        
+        <div><input id="id1-1" data-a1="" class="caixa" type="text" onkeyup="verifica(event)">
+            <input id="id1-2" data-a2="" class="caixa" type="text" onkeyup="verifica(event)">
+            <input id="id1-3" data-a3="" class="caixa" type="text" onkeyup="verifica(event)">
+        </div>
+            
+        <div>
+            <div><input id="id2-1" data-b1="" class="caixa" type="text" onkeyup="verifica(event)">
+                <input id="id2-2" data-b2="" class="caixa" type="text" onkeyup="verifica(event)">
+                <input id="id2-3"  data-b3="" class="caixa" type="text" onkeyup="verifica(event)">
+            </div>
+            
+        </div>
+             
+        <div>
+            <div><input id="id3-1" data-c1="" class="caixa" type="text" onkeyup="verifica(event)">
+                <input id="id3-2" data-c2="" class="caixa" type="text" onkeyup="verifica(event)">
+                <input id="id3-3" data-c3="" class="caixa" type="text" onkeyup="verifica(event)">
+            </div>
+            
+        </div>
+    
+    </section>
+    <p class="recomecar">Para recomeçar arraste o dedo para baixo</p>
+
+
+
+   
+    <footer data-texte="">
+        <a href="https://www.facebook.com/darlan.aguiar.165">
+            <p>&copy; Dr.Gelo Software&#x2122 </p>
+        </a>
+    </footer>
+
+
+
+    <script>
+        
+        var vezDoX = true;
+        var numeroDeJogadas = 0;
+        var houveGanhador = false;
+
+        function jogadorDaVez() {
+            return vezDoX ? "x" : "o";
+        }
+        
+        function jogadorDaVezMostra() {
+            return vezDoX ? "o" : "x";
+        }
+
+        function verifica(e){
+            const valorDigitado = e.target.value;
+            if (valorDigitado.length === 0) {
+                return;
+            }
+
+            if (valorDigitado.toLowerCase() !== jogadorDaVez()){
+                alert("Não digitou Correto");
+                e.target.value = '';
+                return;
+            }
+
+            numeroDeJogadas++;
+            verifica2();
+            vezDoX = !vezDoX;
+        }
+            
+        function saoIguais(a, b, c) {
+            return a.value.length > 0 && a.value === b.value && a.value === c.value;
+        }
+
+        function verifica2(){
+            
+            var a1 = document.querySelector("[data-a1]");
+            var a2 = document.querySelector("[data-a2]");
+            var a3 = document.querySelector("[data-a3]");
+            var b1 = document.querySelector("[data-b1]");
+            var b2 = document.querySelector("[data-b2]");
+            var b3 = document.querySelector("[data-b3]");
+            var c1 = document.querySelector("[data-c1]");
+            var c2 = document.querySelector("[data-c2]");
+            var c3 = document.querySelector("[data-c3]");
+
+            var vezJogador = document.querySelector("[data-troca]");
+
+            vezJogador.innerHTML = `Vez do jogador <span>${jogadorDaVezMostra()}</span>`
+        
+            houveGanhador = saoIguais(a1, a2, a3) ||
+                saoIguais(b1, b2, b3)  ||
+                saoIguais(c1, c2, c3) ||
+                saoIguais(a1, b1, c1) ||
+                saoIguais(a2, b2, c2) ||
+                saoIguais(a3, b3, c3) ||
+                saoIguais(a1, b2, c3) ||
+                saoIguais(a3, b2, c1);
+
+            
+            if (houveGanhador){
+                alert(`O ganhador foi ${jogadorDaVez()}.`);
+                document.location.reload(true)
+            } else {
+                if(numeroDeJogadas === 9) {
+                    alert("Não ouve ganhador, jogue novamente.")
+                    document.location.reload(true)
+                }
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>
