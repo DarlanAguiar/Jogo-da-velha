@@ -162,6 +162,7 @@
             if (valorDigitado.toLowerCase() !== jogadorDaVez()){
                 alert("Não digitou Correto");
                 e.target.value = '';
+                e.target.focus();
                 return;
             }
 
