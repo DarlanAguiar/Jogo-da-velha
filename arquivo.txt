@@ -1,7 +1,7 @@
 Aqui contém algumas expressões matemáticas, meu desafio é capturá-las e validá-las.
 porém este arquivo deverá estar no GitHub.
 
-(23+3)/2 =12
+(23+3)/2 =13
 (1+1) * 2= 3
 4+7-3+5 = 1
 234-234 = 0
