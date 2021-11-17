@@ -1,1 +1,8 @@
-23+23=46
+Aqui contém algumas expressões matemáticas, meu desafio é capturá-las e validá-las.
+porém este arquivo deverá estar no GitHub.
+
+23+23=46,
+45-45 = 1,
+22*2 = 44,
+(78 - 70) * 2 = 10
+
