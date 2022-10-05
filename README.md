@@ -8,3 +8,5 @@
 Meu primeiro projeto no GitHub
 
 O jogo da velha, projeto criado para testar o meu primeiro contato com a linguagem Javascript.
+
+Deploy - [Site Jogo da velha](https://darlanaguiar.github.io/Jogo-da-velha/)
