@@ -1,10 +1,10 @@
-<center>
-  <img src="https://lh3.googleusercontent.com/LPHNVR5zBoBHP8VKjnJLWnXpLk-KlLs3pY7A8bODTJSv3dYUwuczku9qje2zszWf2DrUApOQMv-yk6PO3ocdD3BXNNlMz5FULP7oBA3-2EcfEs_Shnbjli8bK3L2pDheP6CxdUEbTXyihEErlNm5atnuRVLvnerNF55qVZFug8CsoN0qUvh2jPmm2Mt7Kx4yY2mVY92azxHw3iEWWzCG-_6DnxQcm4I8iAjMufozHs4H7sZ7zcjpSiGy4i1j_zUDlwwyoqUxHo3vk6goW_RSy4hkGw8cURyB7slbIlZSL519b-7I4nSo2rNWVVWuMoEHskTVlRX7j18w9A9NWceN3wUoJmn-FoS5AP1bv8QbJilD82LjGLuRfgn6dwdT8rAVjQLWPYFcJmeHfy2QvNgmm-o3cHl2W27H85z2e7mnEOPNazHQ0LQvDqehNPCxiUjaltU6tKI3DTnSekB4sRAvxBLbUlmFtM3iWJtd1WxHf6-SZ6Hy6kcLEpN2aydaN6lzUkx24jikm9_Vg3SG-Ju3LZijV9dbunioO868HzD8g3ZMVyr7f6V8JNmxmEBJVYqJakC5s3zbsiVEournu6e6NyaneU2ezvSDUYctqCQrBkWhX-1Gu6T52D106WL2e4DC7GYEH71gQ8AwQddhd06XErQn7zAQsGv_crQ1apG7R0O9xt6QsnF8xmUC64FCMOXnCr2UF98J9cZCc3kqcr8BwBlcDGZiAxzJqtnflSVsPq92YxpAgSrPqm14UfMQtWs=w505-h668-no?authuser=0" />
-</center>
+# Jogo da velha
+![Captura de tela de 2022-10-04 17-32-33](https://user-images.githubusercontent.com/91347380/194053087-3ead6f05-3759-4e38-b3f3-8180ccf8fd26.png)
+
 
 ---
 
 
 Meu primeiro projeto no GitHub
 
-O jogo da velha, projeto criado para testar o meu primeiro contato coma linguagem Javascript.
+O jogo da velha, projeto criado para testar o meu primeiro contato com a linguagem Javascript.
